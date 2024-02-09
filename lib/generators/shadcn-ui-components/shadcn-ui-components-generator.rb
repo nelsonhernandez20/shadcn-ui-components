@@ -14,6 +14,15 @@ module ShadcnUiComponent
         copy_file "#{component_name}_controller.js", "app/javascript/controllers/#{component_name}_controller.js"
         copy_file "dismissable_controller.js", "app/javascript/controllers/dismissable_controller.js"
       end
+
+      if component_name == "accordion" || component_name == "custom_accordion"
+        copy_file "accordion_controller.js", "app/javascript/controllers/accordion_controller.js"
+      end
+
+      if component_name == "codeblock"
+        copy_file "clipboard_controller.js", "app/javascript/controllers/clipboard_controller.js"
+      end
+
     end
   end
 end
